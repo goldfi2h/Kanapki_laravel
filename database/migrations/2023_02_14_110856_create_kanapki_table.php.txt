@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('kanapki', function (Blueprint $table) {
+            $table->id('id_kanapki');
+            $table->string('nazwa');
+            //$table->foreignId('pieczywo_id')->constrained('pieczywo');
+            $table->bigInteger('pieczywo_id');
+            $table->double('cena',5,2);
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('kanapki');
+    }
+};

@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Skladnik extends Model
+{
+    use HasFactory;
+    protected $table = 'skladniki';
+    protected $primaryKey = 'id_skladnika';
+    protected $fillable = [
+        'nazwa',
+        'jednostka_ilosci'
+    ];
+    public $timestamps = false;
+}

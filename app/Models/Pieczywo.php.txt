@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Pieczywo extends Model
+{
+    use HasFactory;
+    protected $table = 'pieczywo';
+    protected $primaryKey = 'id_chleba';
+    protected $fillable = [
+        'nazwa',
+    ];
+    public function kanapki(){
+        return $this->hasMany(Kanapka::class);
+    }
+}
