@@ -9,6 +9,7 @@ Route::controller(SkladnikController::class)->prefix('skladniki')->group(functio
     Route::get('/{ingredient}', 'show');   //szukaj po id
     Route::get('/search/{name}','search'); //szukaj po nazwie
 
+    Route::delete('/{id}', 'destroy');
     
     Route::post('/','store');
 });

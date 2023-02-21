@@ -41,7 +41,7 @@ class SkladnikController extends Controller
 
     public function destroy($id)
     {
-        //
+        return Ingredient::destroy($id);
     }
     public function search($name)
     {

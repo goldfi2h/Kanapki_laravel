@@ -8,7 +8,7 @@ Route::controller(PieczywoController::class)->prefix('pieczywo')->group(function
     Route::get('/{chleb}', 'show');        //szukaj po id
     Route::get('/search/{name}','search'); //szukaj po nazwie
 
-    Route::delete('/delete/{id}', 'destroy');
+    Route::delete('/{id}', 'destroy');
 
     Route::post('/','store');
 });

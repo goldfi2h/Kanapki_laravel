@@ -4,9 +4,9 @@ use App\Http\Controllers\KanapkaController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(KanapkaController::class)->prefix('kanapki')->group(function () {
-    Route::get('/', 'index');
-    Route::get('/{sandwitch}', 'show');
-    Route::get('/search/{name}','search');
+    Route::get('/', 'index');              //pokaż wszystko
+    Route::get('/{sandwitch}', 'show');    //szukaj po id
+    Route::get('/search/{name}','search'); //szukaj po nazwie
 
     Route::put('/{id}','add_ingredients');
     
