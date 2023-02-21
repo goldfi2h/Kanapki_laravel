@@ -8,7 +8,9 @@ Route::controller(KanapkaController::class)->prefix('kanapki')->group(function (
     Route::get('/{sandwitch}', 'show');
     Route::get('/search/{name}','search');
 
-    Route::put('/add/{id}','add_ingredients');
+    Route::put('/{id}','add_ingredients');
+    
+    Route::delete('/{id}', 'destroy');
 
     Route::post('/','store');
 });

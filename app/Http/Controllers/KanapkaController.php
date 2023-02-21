@@ -81,7 +81,7 @@ class KanapkaController extends Controller
 
     public function destroy($id)
     {
-
+        return Sandwitch::destroy($id);
     }
     public function search($name)
     {
